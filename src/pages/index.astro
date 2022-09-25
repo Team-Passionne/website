@@ -1,0 +1,10 @@
+---
+import { News } from '@components/pages/Index';
+import Layout from '@layouts/Layout.astro';
+import { formatTitle } from '@utils/functions';
+
+---
+
+<Layout title={formatTitle("Accueil")}>
+  <News />
+</Layout>

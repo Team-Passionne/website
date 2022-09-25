@@ -1,0 +1,35 @@
+---
+import { Link, List, ListItem } from "@components/base";
+import { Twitter, Twitch, Discord, Paypal, Tiktok, Instagram } from "@components/icons";
+
+const links = {
+  twitter: "",
+  tiktok: "",
+  instagram: "https://www.instagram.com/passionne_esport",
+  discord: "",
+  twitch: "https://www.twitch.tv/passionnetv",
+  paypal: "https://www.paypal.com/paypalme/passionneesport"
+}
+
+---
+
+<List>
+  <ListItem>
+    <Link href={links.twitter}><Twitter width="44" height="44" /></Link>
+  </ListItem>
+  <ListItem>
+    <Link href={links.tiktok}><Tiktok width="44" height="44" /></Link>
+  </ListItem>
+  <ListItem>
+    <Link href={links.instagram}><Instagram width="44" height="44" /></Link>
+  </ListItem>
+  <ListItem>
+    <Link href={links.discord}><Discord width="44" height="44" /></Link>
+  </ListItem>
+  <ListItem>
+    <Link href={links.twitch}><Twitch width="44" height="44" /></Link>
+  </ListItem>
+  <ListItem>
+    <Link href={links.paypal}><Paypal width="44" height="44" /></Link>
+  </ListItem>
+</List>
