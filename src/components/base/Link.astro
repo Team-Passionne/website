@@ -1,10 +1,16 @@
 ---
 export interface Props {
   href: string
+  blank?: boolean
 }
-const { href } = Astro.props
+const { href, blank } = Astro.props
 ---
 
-<a href={href} >
-  <slot />
-</a>
+<style lang="scss">
+  a {
+    text-decoration: none;
+    color: black
+  }
+</style>
+
+<a href={href} target={blank ? '_blank' : ''}><slot /></a>
