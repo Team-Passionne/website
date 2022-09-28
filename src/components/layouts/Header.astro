@@ -1,8 +1,8 @@
 ---
 import { SocialMedia } from './SocialMedia'
 import { Logo } from '@components/icons'
-import { List, ListItem } from '@components/base';
-import Link from '@components/base/Link.astro';
+import { List, ListItem } from '@components/base'
+import Link from '@components/base/Link.astro'
 
 type TLink = {
   title: string
@@ -13,8 +13,20 @@ type TLink = {
 const links: TLink[] = [
   {
     href: '/',
-    title: 'Accueil'
-  }
+    title: 'Accueil',
+  },
+  {
+    href: '/matchs',
+    title: 'Matchs',
+  },
+  {
+    href: '/staff',
+    title: 'Staff',
+  },
+  {
+    href: '/team',
+    title: 'Team',
+  },
 ]
 ---
 
@@ -28,13 +40,15 @@ const links: TLink[] = [
   <Logo />
   <nav>
     <List>
-      {links.map(({ href, title, blank }) => (
-        <ListItem>
-          <Link href={href} blank={blank}>
-            {title}
-          </Link>
-        </ListItem>
-      ))}
+      {
+        links.map(({ href, title, blank }) => (
+          <ListItem>
+            <Link href={href} blank={blank}>
+              {title}
+            </Link>
+          </ListItem>
+        ))
+      }
     </List>
   </nav>
   <SocialMedia />
