@@ -1,29 +1,35 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
+  "name": "website",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "lint": "eslint --config .eslintrc"
   },
   "dependencies": {
-    "astro": "1.4.2"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@astrojs/image": "0.9.1",
-    "@astrojs/react": "1.1.4",
-    "@astrojs/vue": "1.1.0",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "autoprefixer": "10.4.12",
-    "cssnano": "5.1.13",
-    "flamethrower-router": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "1.55.0",
-    "vue": "3.2.40"
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@types/react": "18.0.24",
+    "@types/react-dom": "18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vitejs/plugin-react": "2.2.0",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.2",
+    "lint-staged": "13.0.4",
+    "prettier": "2.8.0",
+    "typescript": "4.6.4",
+    "vite": "^3.2.3"
   }
 }
