@@ -1,8 +1,8 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://deno.land/x/supabase/mod.ts'
 
 const supabase = createClient(
-  process.env.SUPABASE_URL as string,
-  process.env.SUPABASE_KEY as string
+  Deno.env.get('SUPABASE_URL') as string,
+  Deno.env.get('SUPABASE_KEY') as string
 )
 
 export default async () => {
